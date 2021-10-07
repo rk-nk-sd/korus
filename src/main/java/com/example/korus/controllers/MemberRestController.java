@@ -17,11 +17,6 @@ public class MemberRestController {
 
     private final MembersGroupDaoInMemory membersGroupDaoInMemory;
 
-    @GetMapping()
-    public Set<String> getAll() {
-        return null;
-    }
-
     @GetMapping("/younger/{age}")
     public ResponseEntity<Set<String>> getMembersYoungerCurrentAge(@PathVariable(value = "age") int age) {
         return ResponseEntity.ok(
